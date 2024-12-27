@@ -1,35 +1,7 @@
 {
     "version": 2,
     "routes": [
-      {
-        "src": "/",
-        "dest": "/index.html",
-        "headers": {
-          "Cache-Control": "public, max-age=31536000, immutable",
-          "CDN-Cache-Control": "public, max-age=31536000, stale-while-revalidate=86400",
-          "Vercel-CDN-Cache-Control": "public, max-age=31536000, stale-while-revalidate=86400",
-          "Surrogate-Control": "public, max-age=31536000",
-          "Surrogate-Key": "files",
-          "X-Content-Type-Options": "nosniff",
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Expose-Headers": "*",
-          "Timing-Allow-Origin": "*"
-        }
-      },
-      {
-        "src": "/(.*)",
-        "dest": "https://cdn.jsdelivr.net",
-        "headers": {
-          "Cache-Control": "public, max-age=31536000, immutable",
-          "CDN-Cache-Control": "public, max-age=31536000, stale-while-revalidate=86400",
-          "Vercel-CDN-Cache-Control": "public, max-age=31536000, stale-while-revalidate=86400",
-          "Surrogate-Control": "public, max-age=31536000",
-          "Surrogate-Key": "files",
-          "X-Content-Type-Options": "nosniff",
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Expose-Headers": "*",
-          "Timing-Allow-Origin": "*"
-        }
-      }
+      {"src": "/","dest": "/index.html"},
+      {"src": "/(.*)","dest": "https://cdn.jsdelivr.net"}
     ]
 }
